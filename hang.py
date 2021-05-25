@@ -18,6 +18,65 @@ hm=turtle.Turtle()
 hm.speed(0)
 state=turtle.Turtle()
 state.ht()
+#-------------defining functions----------------------------------------------
+
+#-----------------turtle library related functions-------------------#-
+
+#defining correct function 
+def correct():
+    
+        state.clear()
+        state.color("green")
+        state.write("Correct!!",font=("Arial",50,"bold"))
+
+#defining lose function        
+def lose():
+    
+        state.clear()
+        state.color("white")
+        state.write("YOU LOSE!!", font=("Arial",50,"bold"))
+# now for "this was the movie"
+     #cordxy is a variable
+        cordxy=letter[0].pos()
+        
+     #temp is a variable
+        temp=turtle.Turtle()
+        temp.ht()
+        temp.speed(0)
+        temp.color("white")
+        temp.penup()
+        
+    #position of "this was the movie"
+        temp.setpos(cordxy[0],cordxy[1]+40)
+        temp.pendown()
+        temp.write("This was the movie:",align="left", font=("Arial", 30, "bold"))
+     #at the end for showing the movie
+        for i in range(len(movie)):
+                if(movie[i] not in user_list_correct):
+                        letter[i].color("red")
+                        letter[i].write(movie[i],align="left", font=("Arial", 20, "bold"))
+#defining function for win
+def win():
+    
+	state.clear()
+	state.color("white")
+	state.write("YOU WIN!!", font=("Arial",50,"bold"))
+
+#defining function for alredy pressed keys	
+def already():
+
+
+	state.clear()
+	state.color("green")
+	state.write("YOU Already pressed that key!!", font=("Arial",50,"bold"))
+#deining function for wrong choice
+def wrong():
+    
+	state.clear()
+	state.color("red")
+	state.write("wrong", font=("Arial",50,"bold"))
+
+
 #-----------------------------Adding Coding------------------------------------------#
 
 def A():
@@ -72,3 +131,47 @@ def Y():
 			evaluate(movie,"Y")
 def Z():
 			evaluate(movie,"Z")
+#function which controls the drawing of hangman figure--------------------------
+def Hangman(num):
+    global hmTC
+    if(num==0):
+
+        
+        #for corrct characters------------------------------------
+
+            hm.penup()
+            hm.setpos(-670,-340)
+            hm.pendown()
+            hm.ht()
+            hm.begin_fill()
+            hm.fd(400)
+            hm.lt(90)
+            hm.fd(50)
+            hm.lt(90)
+            hm.fd(390)
+
+            hm.rt(90)
+            hm.fd(600)
+            hm.rt(90)
+            hm.fd(400)
+            hm.rt(90)
+            hm.fd(20)
+            hm.lt(90)
+            hm.fd(10)
+
+
+            
+            hm.lt(90)
+            hmTC=hm.pos()
+            hm.fd(30)
+
+            hm.lt(90)
+            hm.fd(420)
+            hm.lt(90)
+            hm.fd(550)
+            hm.end_fill()
+            
+            hm.pensize(5)			
+
+
+
