@@ -171,7 +171,112 @@ def Hangman(num):
             hm.fd(550)
             hm.end_fill()
             
-            hm.pensize(5)			
+            hm.pensize(5)
+            
+    elif(num==1):
+        
+        # user looses one chance
+            hm.penup()
+            hm.setpos(hmTC[0],hmTC[1])
+            hm.rt(90)
+            hm.pendown()
+            hm.circle(40)
+           
+    elif(num==2):
+            
+        #user looses two chances
+            hm.penup()
+            hm.setpos(hmTC[0],hmTC[1]-80)
+            hm.lt(90)
+            hm.pendown()
+            hm.fd(140)
+            hmTC=hm.pos()
+           
+    elif(num==3):
+            
+         #user looses 3 chances
+            hm.penup()
+            hm.rt(30)
+            hm.pendown()
+            hm.fd(100)
+            hm.rt(60)
+            hm.fd(10)
+            hm.penup()
+            hm.rt(180)
+            hm.fd(10)
+            hm.rt(30)
+            hm.fd(100)
+            hm.rt(90)
+            hm.pendown()
+            
+    elif(num==4):
+            
+         #user looses 4 chances
+        
+            hm.penup()
+            hm.setpos(hmTC[0],hmTC[1])
+
+            hm.pendown()
+            hm.lt(60)
+            hm.fd(100)
+            hm.lt(60)
+            hm.fd(10)
+            #hm.rt(90)
+
+
+
+    elif(num==5):
+            
+         #user looses 5 chances
+            hm.penup()
+            hm.setpos(hmTC[0],hmTC[1])
+            hm.lt(90)
+            hm.fd(90)
+            hm.lt(180)
+            hm.rt(30)
+            hm.pendown()
+            hm.fd(80)
+            hm.rt(60)
+
+
+
+    elif(num==6):
+         #user looses 6 chances
+            hm.penup()
+            hm.setpos(hmTC[0],hmTC[1])
+            hm.rt(90)
+            hm.fd(90)
+            hm.lt(180)
+            hm.lt(30)
+            hm.pendown()
+            hm.fd(80)
+
+    elif(num==7):
+            
+         #user looses 7 chances
+            hm.penup()
+            hm.setpos(-235.00,265.00)
+            hm.rt(90)
+            hm.pendown()
+            hm.circle(4)
+    elif(num==8):
+            
+         #user looses 8 chances
+            hm.penup()
+            hm.setpos(-265,265.00)
+            hm.rt(90)
+            hm.pendown()
+            hm.circle(4)
+
+    else:
+            
+            
+         #user looses last chance
+           hm.penup()
+          hm.setpos(hm.pos()[0]+25,hm.pos()[1]-35)
+          hm.pendown()
+          hm.rt(30)
+          hm.circle(10,180)
 
 
 
