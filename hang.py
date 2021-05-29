@@ -272,7 +272,7 @@ def Hangman(num):
             
             
          #user looses last chance
-           hm.penup()
+          hm.penup()
           hm.setpos(hm.pos()[0]+25,hm.pos()[1]-35)
           hm.pendown()
           hm.rt(30)
