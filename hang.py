@@ -278,5 +278,84 @@ def Hangman(num):
           hm.rt(30)
           hm.circle(10,180)
 
+#creates boxes to type characters in    
+def createDash(num):
+    dash=[]
+    letter=[]
+    for i in range(num):
+        dash.append(turtle.Turtle())
+        dash[i].color("#800000","white")
+        dash[i].pensize(4)
+        letter.append(turtle.Turtle())      
+        dash[i].ht()
+        dash[i].speed(0)
+        letter[i].ht()      
+        dash[i].penup()
+        letter[i].penup()       
+        dash[i].setpos(-600+i*50,-200)
+        letter[i].setpos(-595+i*50,-200)        
+        dash[i].pendown()
+        letter[i].pendown()
+        if(i in movie_space_position):
+                    dash[i].penup()
+                    continue
+        dash[i].begin_fill()
+        dash[i].fd(30)
+        dash[i].lt(90)
+        dash[i].fd(30)
+        dash[i].lt(90)
+        dash[i].fd(30)
+        dash[i].lt(90)
+        dash[i].fd(30)
+        dash[i].end_fill()
+    return letter
+		
 
 
+
+
+
+
+
+
+
+
+
+#----------------------------core working of the game------------------------------#
+def evaluate(movie,user_input):
+    global wrongCount
+    global gameFlag
+    if(gameFlag==True):
+        if(user_input in movie and user_input not in user_list_correct):
+            tempPositionList=[]
+            for i in range(len(movie)):
+                if(movie[i]==user_input):
+                    letter[i].write(user_input,align="left", font=("Arial", 20, "bold"))
+                    user_list_correct.append(user_input)
+                    tempPositionList.append(i)
+                    correct()                    
+                    if(len(user_list_correct)==len(movie)):
+                        win()
+                        gameFlag=False
+            
+                    
+                    
+                
+                
+            #return tempPositionList
+        
+        else:
+            if(user_input in user_list_correct):
+                already()
+                
+            else:
+                wrong()
+                user_list_wrong.append(user_input)
+                wrongCount+=1
+                if(wrongCount>=9):
+                    lose()
+                    gameFlag=False
+                
+                
+                Hangman(wrongCount)
+    
