@@ -358,4 +358,103 @@ def evaluate(movie,user_input):
                 
                 
                 Hangman(wrongCount)
+#--------------file handling----------- 
+try:
+#=================name of file is "movies.txt"======================
+    f = open("movies.txt")
+except IOERROR:
+        print ('There is no file named', movie.txt)
     
+movie_list=[]
+for line in f:
+    line = line.strip()
+    movie_list.append(line)
+    
+
+movie = random.choice(movie_list)
+movie=movie.upper()
+l = len(movie)
+movie = list(movie)
+movie_space_count=0
+movie_space_position=[]
+user_list_correct  = []
+user_list_wrong = []
+user_input=[]
+
+for c in range(len(movie)):
+    if(movie[c]==' '):
+        movie_space_count+=1
+        movie_space_position.append(c)
+        user_list_correct.append(' ')
+        
+#====background image==========
+
+try:
+    wn = turtle.Screen()
+    wn.setup (width=1920, height=1080, startx=0, starty=0)
+    wn.bgpic("m1.gif")
+except:
+    print("image path error occurs",e)
+    
+wn.tracer(2)
+Hangman(0)
+letter = createDash(len(movie))
+wn.tracer(1)
+wn.onkey(A,"a")
+wn.onkey(B,"b")
+wn.onkey(A,"a")
+wn.onkey(A,"A")
+wn.onkey(B,"b")
+wn.onkey(B,"B")
+wn.onkey(C,"c")
+wn.onkey(C,"C")
+wn.onkey(D,"d")
+wn.onkey(D,"D")
+wn.onkey(E,"e")
+wn.onkey(E,"E")
+wn.onkey(F,"f")
+wn.onkey(F,"F")
+wn.onkey(G,"g")
+wn.onkey(G,"G")
+wn.onkey(H,"h")
+wn.onkey(H,"H")
+wn.onkey(I,"i")
+wn.onkey(I,"I")
+wn.onkey(J,"j")
+wn.onkey(J,"J")
+wn.onkey(K,"k")
+wn.onkey(K,"K")
+wn.onkey(L,"l")
+wn.onkey(L,"L")
+wn.onkey(M,"m")
+wn.onkey(M,"M")
+wn.onkey(N,"n")
+wn.onkey(N,"N")
+wn.onkey(O,"o")
+wn.onkey(O,"O")
+wn.onkey(P,"p")
+wn.onkey(P,"P")
+wn.onkey(Q,"q")
+wn.onkey(Q,"Q")
+wn.onkey(R,"r")
+wn.onkey(R,"R")
+wn.onkey(S,"s")
+wn.onkey(S,"S")
+wn.onkey(T,"t")
+wn.onkey(T,"T")
+wn.onkey(U,"u")
+wn.onkey(U,"U")
+wn.onkey(V,"v")
+wn.onkey(V,"V")
+wn.onkey(W,"w")
+wn.onkey(W,"W")
+wn.onkey(X,"x")
+wn.onkey(X,"X")
+wn.onkey(Y,"y")
+wn.onkey(Y,"Y")
+wn.onkey(Z,"z")
+wn.onkey(Z,"Z")
+if(gameFlag==True):
+	wn.listen()
+
+turtle.mainloop()    
