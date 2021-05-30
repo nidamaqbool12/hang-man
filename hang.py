@@ -77,7 +77,7 @@ def wrong():
 	state.write("wrong", font=("Arial",50,"bold"))
 
 
-#-----------------------------Adding Coding------------------------------------------#
+#-----------------------------Adding Coding--------------------------------#
 
 def A():
 			evaluate(movie,"A")
@@ -272,11 +272,11 @@ def Hangman(num):
             
             
          #user looses last chance
-          hm.penup()
-          hm.setpos(hm.pos()[0]+25,hm.pos()[1]-35)
-          hm.pendown()
-          hm.rt(30)
-          hm.circle(10,180)
+           hm.penup()
+           hm.setpos(hm.pos()[0]+25,hm.pos()[1]-35)
+           hm.pendown()
+           hm.rt(30)
+           hm.circle(10,180)
 
 #creates boxes to type characters in    
 def createDash(num):
@@ -360,7 +360,7 @@ def evaluate(movie,user_input):
                 Hangman(wrongCount)
 #--------------file handling----------- 
 try:
-#=================name of file is "movies.txt"======================
+#=================name of file is "movies.txt======================
     f = open("movies.txt")
 except IOERROR:
         print ('There is no file named', movie.txt)
