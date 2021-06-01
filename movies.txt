@@ -1,6 +1,5 @@
 A Beautiful Mind
 A Few Good Men
-All the Presidents Men
 American Beauty
 Annie Hall
 Apocalypto
@@ -31,7 +30,7 @@ Gone Baby Gone
 Good Will Hunting
 Goodfellas
 Gran Torino
-Harry Potter and the Deathly Hallows: Part 1
+Harry Potter 
 Hotel Rwanda
 In Bruges
 In the Heat of the Night
@@ -45,9 +44,6 @@ Million Dollar Baby
 Millions
 Mulholland Dr.
 Munich
-No Country for Old Men
-Once Upon a Time in America
-One Flew Over the Cuckoos Nest
 Papillon
 Patton
 Pride &amp; Prejudice
@@ -64,7 +60,6 @@ Superbad
 Taxi Driver
 The Blind Side
 The Bourne Ultimatum
-The Bridges of Madison County
 The Bucket List
 The Departed
 The English Patient
@@ -76,7 +71,6 @@ The Insider
 The Italian Job
 The Kings Speech
 The Last King of Scotland
-The Lord of the Rings: The Return of the King
 The Matrix
 The Namesake
 The Pianist
