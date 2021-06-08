@@ -392,7 +392,7 @@ for c in range(len(movie)):
 try:
     wn = turtle.Screen()
     wn.setup (width=1920, height=1080, startx=0, starty=0)
-    wn.bgpic("m1.gif")
+    wn.bgpic("imain.gif")
 except:
     print("image path error occurs",e)
     
